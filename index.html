@@ -53,17 +53,25 @@ body{
 ========================================================= */
 
 #stars{
+
     position:fixed;
     inset:0;
+
     pointer-events:none;
+
     z-index:-1;
 }
 
 .star{
+
     position:absolute;
+
     color:#ffffff;
+
     opacity:.7;
-    animation:twinkle 2s infinite alternate;
+
+    animation:
+    twinkle 2s infinite alternate;
 }
 
 @keyframes twinkle{
@@ -356,37 +364,33 @@ body{
     border-radius:30px;
 
     background:
-    rgba(5,8,25,.85);
+    rgba(5,8,25,.9);
 
     border:
     1px solid
     rgba(255,255,255,.15);
 
-    backdrop-filter:blur(10px);
+    backdrop-filter:
+    blur(10px);
 
     font-family:Arial,sans-serif;
 
     font-size:13px;
 
     cursor:pointer;
+
+    transition:.3s;
 }
 
-.music-frame{
+.music-status:hover{
 
-    position:fixed;
+    transform:
+    translateY(-3px);
 
-    width:1px;
-
-    height:1px;
-
-    opacity:.01;
-
-    pointer-events:none;
-
-    left:-100px;
-
-    bottom:-100px;
+    background:
+    rgba(20,30,70,.95);
 }
+
 
 /* =========================================================
    COMMON SECTION
@@ -549,7 +553,8 @@ body{
     background:
     rgba(255,255,255,.06);
 
-    backdrop-filter:blur(10px);
+    backdrop-filter:
+    blur(10px);
 
     border:
     1px solid
@@ -1349,15 +1354,25 @@ input:focus{
 
 
 <!-- =====================================================
-     HIDDEN YOUTUBE MUSIC
+     LOCAL DEVOTIONAL MUSIC
+     
+     IMPORTANT:
+     Upload your MP3 file to:
+     music/krishna-bhajan.mp3
 ===================================================== -->
 
-<iframe
-    id="musicFrame"
-    class="music-frame"
-    title="Krishna devotional music"
-    allow="autoplay">
-</iframe>
+<audio
+    id="krishnaMusic"
+    loop
+    preload="auto">
+
+    <source
+        src="music/krishna-bhajan.mp3"
+        type="audio/mpeg">
+
+    Your browser does not support audio.
+
+</audio>
 
 
 <!-- =====================================================
@@ -1653,4 +1668,1145 @@ alt="Krishna idol with peacock feather">
 
 लड्डू गोपाल
 
-   </h3>
+</h3>
+
+<p>
+
+Krishna with the beautiful peacock feather.
+
+</p>
+
+</div>
+
+
+<div class="gallery-card">
+
+<div style="
+height:260px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:100px;
+background:
+radial-gradient(
+circle,
+#3154aa,
+#070a20
+);
+">
+
+🪷
+
+</div>
+
+<h3>
+
+जन्माष्टमी
+
+</h3>
+
+<p>
+
+The divine celebration of Krishna's birth.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PERSONALIZED BLESSING
+===================================================== -->
+
+<section class="section">
+
+<div class="label">
+
+PERSONAL BLESSING
+
+</div>
+
+
+<h2 class="title">
+
+Receive Krishna's Blessing
+
+</h2>
+
+
+<p class="description">
+
+Enter your name and receive a special
+Janmashtami message.
+
+</p>
+
+
+<div class="blessing-card">
+
+
+<input
+    id="visitorName"
+    class="name-input"
+    type="text"
+    maxlength="30"
+    placeholder="Enter your name">
+
+
+<br>
+
+
+<button
+    class="primary-btn"
+    onclick="generateBlessing()">
+
+🙏 Receive Blessing
+
+</button>
+
+
+<div
+    id="blessingResult"
+    class="blessing-result">
+
+<div class="emoji">
+
+🪷
+
+</div>
+
+
+<div
+    id="blessingText"
+    class="blessing-text">
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     QUOTE
+===================================================== -->
+
+<section class="quote-section">
+
+
+<div class="quote-mark">
+
+“
+
+</div>
+
+
+<div class="quote-text">
+
+कर्म करते रहो,
+परिणाम की चिंता मत करो।
+
+</div>
+
+
+<div class="quote-author">
+
+— श्री कृष्ण
+
+</div>
+
+
+</section>
+
+
+<!-- =====================================================
+     JANMASHTAMI VIDEO
+===================================================== -->
+
+<section class="section">
+
+<div class="label">
+
+DEVOTIONAL VIDEO
+
+</div>
+
+
+<h2 class="title">
+
+Krishna Bhajan
+
+</h2>
+
+
+<p class="description">
+
+Enjoy a Janmashtami devotional video
+while visiting Krishna Darshan.
+
+</p>
+
+
+<div class="video-wrapper">
+
+
+<iframe
+src="https://www.youtube.com/embed/MmZ5YrYZcF4"
+title="Krishna Janmashtami Special Bhajans"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen>
+</iframe>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     USER MEDIA
+===================================================== -->
+
+<section class="section">
+
+<div class="label">
+
+YOUR CELEBRATION
+
+</div>
+
+
+<h2 class="title">
+
+Add Your Home Decoration
+
+</h2>
+
+
+<p class="description">
+
+Select photographs and videos
+of your actual Janmashtami decoration.
+
+</p>
+
+
+<div class="media-grid">
+
+
+<div class="media-card">
+
+
+<h3>
+
+📸 Your Jhanki Photo
+
+</h3>
+
+
+<p>
+
+Select a photo from your phone.
+
+</p>
+
+
+<input
+    type="file"
+    id="photoInput"
+    accept="image/*">
+
+
+<img
+    id="photoPreview"
+    class="preview-image"
+    alt="Your Janmashtami decoration">
+
+
+</div>
+
+
+<div class="media-card">
+
+
+<h3>
+
+🎥 Your Celebration Video
+
+</h3>
+
+
+<p>
+
+Select your own Janmashtami video.
+
+</p>
+
+
+<input
+    type="file"
+    id="videoInput"
+    accept="video/*">
+
+
+<video
+    id="videoPreview"
+    class="preview-video"
+    controls
+    playsinline>
+</video>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     COUNTDOWN
+===================================================== -->
+
+<section class="countdown-section">
+
+
+<div class="label">
+
+DIVINE MOMENT
+
+</div>
+
+
+<h2 class="title">
+
+Krishna Janma Countdown
+
+</h2>
+
+
+<p>
+
+Nishita Kaal Celebration
+
+</p>
+
+
+<div
+    id="countdown"
+    class="countdown">
+
+Loading...
+
+</div>
+
+
+<div
+    id="countdownMessage"
+    class="countdown-message">
+
+Preparing for the divine celebration...
+
+</div>
+
+
+</section>
+
+
+<!-- =====================================================
+     SHARE
+===================================================== -->
+
+<section class="share-section">
+
+
+<h2>
+
+Share Krishna's Blessings 🦚
+
+</h2>
+
+
+<p>
+
+Invite your relatives and friends
+to experience Krishna Darshan.
+
+</p>
+
+
+<button
+    class="primary-btn"
+    onclick="shareWebsite()">
+
+📲 Share With Family
+
+</button>
+
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+<div class="footer-feather">
+
+🦚
+
+</div>
+
+
+<h2>
+
+जय श्री कृष्ण
+
+</h2>
+
+
+<p>
+
+नंद के घर आनंद भयो,
+<br>
+
+जय कन्हैया लाल की!
+
+</p>
+
+
+<div class="attribution">
+
+Krishna artwork:
+Wikimedia Commons —
+"Beautiful image of lord krishna crafted in vibrant artistic way"
+(Public-domain status stated on the source page).
+
+<br><br>
+
+Krishna figurine image:
+Wikimedia Commons —
+"Krishna and peacock feather"
+by Sharmapooja0403542,
+licensed CC BY-SA 4.0.
+
+</div>
+
+
+<div class="copyright">
+
+Krishna Darshan • Janmashtami 2026
+
+</div>
+
+
+</footer>
+
+
+<!-- =====================================================
+     MODAL
+===================================================== -->
+
+<div
+    class="modal"
+    id="modal">
+
+
+<div class="modal-box">
+
+
+<button
+    class="close-modal"
+    onclick="closeModal()">
+
+×
+
+</button>
+
+
+<div
+    id="modalIcon"
+    class="modal-icon">
+
+🦚
+
+</div>
+
+
+<h2
+    id="modalTitle"
+    class="modal-title">
+
+Krishna
+
+</h2>
+
+
+<p
+    id="modalMessage"
+    class="modal-message">
+
+</p>
+
+
+<button
+    class="primary-btn"
+    onclick="closeModal()">
+
+राधे राधे 🙏
+
+</button>
+
+
+</div>
+
+</div>
+
+
+<script>
+
+/* =========================================================
+   STAR GENERATOR
+========================================================= */
+
+const stars =
+document.getElementById("stars");
+
+for(
+    let i=0;
+    i<70;
+    i++
+){
+
+    const star =
+    document.createElement("div");
+
+    star.className="star";
+
+    star.textContent =
+    Math.random()>.5
+    ? "✦"
+    : "✧";
+
+    star.style.left =
+    Math.random()*100+"%";
+
+    star.style.top =
+    Math.random()*100+"%";
+
+    star.style.fontSize =
+    (7+Math.random()*14)+"px";
+
+    star.style.animationDelay =
+    Math.random()*3+"s";
+
+    stars.appendChild(star);
+}
+
+
+/* =========================================================
+   SCROLL + MUSIC
+========================================================= */
+
+function startDarshan(){
+
+    startMusic();
+
+    document
+    .getElementById("darshan")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+    createFlowers(12);
+
+}
+
+
+/* =========================================================
+   DEVOTIONAL MUSIC
+========================================================= */
+
+const krishnaMusic =
+document.getElementById("krishnaMusic");
+
+const musicButton =
+document.getElementById("musicButton");
+
+const musicStatus =
+document.getElementById("musicStatus");
+
+let musicPlaying=false;
+
+
+/* ---------------------------------------------------------
+   START MUSIC
+--------------------------------------------------------- */
+
+async function startMusic(){
+
+    try{
+
+        krishnaMusic.volume=0.7;
+
+        await krishnaMusic.play();
+
+        musicPlaying=true;
+
+        musicButton.textContent=
+        "🔊 Music";
+
+        musicStatus.textContent=
+        "🔊 Devotional music playing";
+
+    }
+
+    catch(error){
+
+        console.log(
+            "Music could not start:",
+            error
+        );
+
+        musicPlaying=false;
+
+        musicButton.textContent=
+        "🔇 Music";
+
+        musicStatus.textContent=
+        "🔇 Tap for devotional music";
+
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   TOGGLE MUSIC
+--------------------------------------------------------- */
+
+function toggleMusic(){
+
+    if(!musicPlaying){
+
+        startMusic();
+
+    }
+
+    else{
+
+        krishnaMusic.pause();
+
+        musicPlaying=false;
+
+        musicButton.textContent=
+        "🔇 Music";
+
+        musicStatus.textContent=
+        "🔇 Tap for devotional music";
+
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   MUSIC EVENT LISTENERS
+--------------------------------------------------------- */
+
+krishnaMusic.addEventListener(
+    "play",
+    function(){
+
+        musicPlaying=true;
+
+        musicButton.textContent=
+        "🔊 Music";
+
+        musicStatus.textContent=
+        "🔊 Devotional music playing";
+
+    }
+);
+
+
+krishnaMusic.addEventListener(
+    "pause",
+    function(){
+
+        musicPlaying=false;
+
+        musicButton.textContent=
+        "🔇 Music";
+
+        musicStatus.textContent=
+        "🔇 Tap for devotional music";
+
+    }
+);
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+function showMessage(title,message){
+
+    document
+    .getElementById("modalTitle")
+    .textContent=title;
+
+    document
+    .getElementById("modalMessage")
+    .textContent=message;
+
+    document
+    .getElementById("modal")
+    .style.display="flex";
+
+}
+
+
+function closeModal(){
+
+    document
+    .getElementById("modal")
+    .style.display="none";
+
+}
+
+
+document
+.getElementById("modal")
+.addEventListener(
+    "click",
+    function(e){
+
+        if(
+            e.target===this
+        ){
+
+            closeModal();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   BLESSING GENERATOR
+========================================================= */
+
+function generateBlessing(){
+
+    const name =
+    document
+    .getElementById("visitorName")
+    .value
+    .trim();
+
+    if(!name){
+
+        alert(
+            "कृपया अपना नाम लिखें 🙏"
+        );
+
+        return;
+
+    }
+
+
+    const messages=[
+
+        `${name}, श्री कृष्ण आपके जीवन को प्रेम, शांति और आनंद से भर दें। 🦚💙`,
+
+        `${name}, कान्हा की कृपा आपके और आपके परिवार पर सदैव बनी रहे। 🪷🙏`,
+
+        `${name}, श्री कृष्ण आपको हर कठिन राह पर सही दिशा और शक्ति दें। 🪈✨`,
+
+        `${name}, आपके जीवन में कृष्ण की मुस्कान जैसी खुशियाँ सदैव बनी रहें। 💙`,
+
+        `${name}, राधे-कृष्ण आपके जीवन में सुख, शांति और समृद्धि लेकर आएँ। 🦚🙏`
+
+    ];
+
+
+    const message =
+    messages[
+        Math.floor(
+            Math.random()*
+            messages.length
+        )
+    ];
+
+
+    document
+    .getElementById("blessingText")
+    .textContent=message;
+
+
+    document
+    .getElementById("blessingResult")
+    .style.display="block";
+
+
+    createFlowers(15);
+
+}
+
+
+/* =========================================================
+   ENTER KEY
+========================================================= */
+
+document
+.getElementById("visitorName")
+.addEventListener(
+    "keydown",
+    function(e){
+
+        if(
+            e.key==="Enter"
+        ){
+
+            generateBlessing();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   FLOWER EFFECT
+========================================================= */
+
+function createFlowers(number=6){
+
+    const flowers=[
+
+        "🌸",
+        "🌺",
+        "🌼",
+        "🪷",
+        "✨",
+        "🦚"
+
+    ];
+
+
+    for(
+        let i=0;
+        i<number;
+        i++
+    ){
+
+        const flower =
+        document.createElement("div");
+
+        flower.className=
+        "flower";
+
+        flower.textContent=
+        flowers[
+            Math.floor(
+                Math.random()*
+                flowers.length
+            )
+        ];
+
+        flower.style.left=
+        Math.random()*100+"%";
+
+        flower.style.fontSize=
+        (15+Math.random()*22)+"px";
+
+        flower.style.animationDuration=
+        (5+Math.random()*6)+"s";
+
+        document.body
+        .appendChild(flower);
+
+
+        setTimeout(
+            ()=>{
+                flower.remove();
+            },
+            12000
+        );
+
+    }
+
+}
+
+
+setInterval(
+    ()=>{
+        createFlowers(2);
+    },
+    6000
+);
+
+
+/* =========================================================
+   PHOTO PREVIEW
+========================================================= */
+
+document
+.getElementById("photoInput")
+.addEventListener(
+    "change",
+    function(){
+
+        const file=
+        this.files[0];
+
+        if(!file){
+
+            return;
+
+        }
+
+
+        const url=
+        URL.createObjectURL(file);
+
+
+        const preview=
+        document
+        .getElementById(
+            "photoPreview"
+        );
+
+
+        preview.src=url;
+
+        preview.style.display=
+        "block";
+
+    }
+);
+
+
+/* =========================================================
+   VIDEO PREVIEW
+========================================================= */
+
+document
+.getElementById("videoInput")
+.addEventListener(
+    "change",
+    function(){
+
+        const file=
+        this.files[0];
+
+        if(!file){
+
+            return;
+
+        }
+
+
+        const url=
+        URL.createObjectURL(file);
+
+
+        const video=
+        document
+        .getElementById(
+            "videoPreview"
+        );
+
+
+        video.src=url;
+
+        video.style.display=
+        "block";
+
+    }
+);
+
+
+/* =========================================================
+   COUNTDOWN
+========================================================= */
+
+const targetDate=
+new Date(
+    "2026-09-04T23:57:00+05:30"
+);
+
+
+function updateCountdown(){
+
+    const now=
+    new Date();
+
+    const difference=
+    targetDate-now;
+
+
+    const countdown=
+    document
+    .getElementById(
+        "countdown"
+    );
+
+
+    const message=
+    document
+    .getElementById(
+        "countdownMessage"
+    );
+
+
+    if(
+        difference<=0
+    ){
+
+        countdown.textContent=
+        "🦚 जय श्री कृष्ण! 🦚";
+
+        message.textContent=
+        "कृष्ण जन्मोत्सव का पावन क्षण आ गया है।";
+
+        return;
+
+    }
+
+
+    const days=
+    Math.floor(
+        difference/
+        (1000*60*60*24)
+    );
+
+
+    const hours=
+    Math.floor(
+        (difference/
+        (1000*60*60))%24
+    );
+
+
+    const minutes=
+    Math.floor(
+        (difference/
+        (1000*60))%60
+    );
+
+
+    const seconds=
+    Math.floor(
+        (difference/1000)%60
+    );
+
+
+    countdown.textContent=
+    `${days}D • ${hours}H • ${minutes}M • ${seconds}S`;
+
+
+    message.textContent=
+    "Preparing for the divine midnight celebration...";
+
+}
+
+
+setInterval(
+    updateCountdown,
+    1000
+);
+
+updateCountdown();
+
+
+/* =========================================================
+   SHARE
+========================================================= */
+
+async function shareWebsite(){
+
+    const data={
+
+        title:
+        "Krishna Darshan — Janmashtami 2026",
+
+        text:
+        "🦚 Join me for Krishna Darshan — Janmashtami 2026! जय श्री कृष्ण 🙏",
+
+        url:
+        window.location.href
+
+    };
+
+
+    if(
+        navigator.share
+    ){
+
+        try{
+
+            await navigator.share(data);
+
+        }
+
+        catch(error){
+
+            console.log(
+                "Sharing cancelled."
+            );
+
+        }
+
+    }
+
+    else{
+
+        const whatsapp=
+        "https://wa.me/?text="+
+        encodeURIComponent(
+            data.text+
+            "\n"+
+            data.url
+        );
+
+        window.open(
+            whatsapp,
+            "_blank"
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   INITIAL EFFECT
+========================================================= */
+
+setTimeout(
+    ()=>{
+        createFlowers(8);
+    },
+    1500
+);
+
+</script>
+
+</body>
+</html>
