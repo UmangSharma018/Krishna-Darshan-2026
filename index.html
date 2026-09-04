@@ -1,0 +1,1725 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Krishna Darshan — Janmashtami 2026</title><meta name="description"
+content="Krishna Darshan — A digital Janmashtami celebration experience">
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Georgia,"Times New Roman",serif;
+    background:#050816;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(circle at 50% 10%,#263d8f 0%,transparent 35%),
+        radial-gradient(circle at 10% 60%,#16265d 0%,transparent 30%),
+        radial-gradient(circle at 90% 70%,#17285d 0%,transparent 30%);
+    z-index:-3;
+}
+
+.stars{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:-2;
+    overflow:hidden;
+}
+
+.star{
+    position:absolute;
+    animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+    from{opacity:.15;transform:scale(.7);}
+    to{opacity:1;transform:scale(1.2);}
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+
+    padding:16px 7%;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background:rgba(3,5,20,.72);
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.logo{
+    font-size:20px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.nav-buttons{
+    display:flex;
+    gap:10px;
+}
+
+.nav-btn{
+    padding:9px 15px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,.25);
+    background:rgba(255,255,255,.08);
+    color:white;
+    cursor:pointer;
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    padding:110px 20px 70px;
+
+    position:relative;
+}
+
+.hero-content{
+    max-width:900px;
+    animation:heroIn 1.5s ease;
+}
+
+@keyframes heroIn{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.peacock-feather{
+    font-size:90px;
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0) rotate(-2deg);
+    }
+    50%{
+        transform:translateY(-18px) rotate(3deg);
+    }
+}
+
+.om{
+    font-size:22px;
+    letter-spacing:4px;
+    margin:20px 0;
+}
+
+.hero h1{
+    font-size:clamp(50px,10vw,100px);
+    line-height:1;
+    margin-bottom:15px;
+}
+
+.hero h2{
+    font-size:clamp(25px,5vw,45px);
+    margin-bottom:20px;
+}
+
+.hero-date{
+    font-size:19px;
+    margin-bottom:20px;
+}
+
+.hero-description{
+    font-family:Arial,sans-serif;
+    opacity:.75;
+    margin-bottom:35px;
+}
+
+.primary-btn{
+    border:none;
+    padding:15px 30px;
+    border-radius:40px;
+    background:#f2c94c;
+    color:#111;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.primary-btn:hover{
+    transform:translateY(-4px) scale(1.04);
+}
+
+/* =====================================================
+   COMMON SECTIONS
+===================================================== */
+
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:100px 7%;
+    text-align:center;
+}
+
+.label{
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    letter-spacing:4px;
+    opacity:.65;
+    margin-bottom:15px;
+}
+
+.title{
+    font-size:clamp(35px,6vw,60px);
+    margin-bottom:15px;
+}
+
+.description{
+    font-family:Arial,sans-serif;
+    opacity:.7;
+    line-height:1.7;
+    margin-bottom:45px;
+}
+
+/* =====================================================
+   JHANKI
+===================================================== */
+
+.jhanki{
+    position:relative;
+
+    max-width:850px;
+    height:540px;
+
+    margin:auto;
+
+    border-radius:40px;
+
+    background:
+        radial-gradient(circle at center,
+        rgba(66,99,210,.4),
+        rgba(5,8,25,.7));
+
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.45);
+
+    overflow:hidden;
+}
+
+.jhanki::before{
+    content:"";
+    position:absolute;
+    inset:20px;
+
+    border:1px solid rgba(242,201,76,.18);
+    border-radius:30px;
+}
+
+.jhanki-center{
+    position:absolute;
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    text-align:center;
+}
+
+.krishna-button{
+    border:none;
+    background:none;
+    cursor:pointer;
+
+    font-size:120px;
+
+    animation:krishnaFloat 3s infinite ease-in-out;
+}
+
+@keyframes krishnaFloat{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+.krishna-label{
+    font-size:18px;
+}
+
+.sacred{
+    position:absolute;
+
+    border:none;
+    background:rgba(255,255,255,.05);
+
+    border-radius:25px;
+
+    padding:12px;
+
+    color:white;
+
+    cursor:pointer;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    transition:.35s;
+
+    backdrop-filter:blur(5px);
+}
+
+.sacred:hover{
+    transform:scale(1.12);
+    background:rgba(255,255,255,.12);
+}
+
+.sacred-icon{
+    font-size:50px;
+}
+
+.sacred-name{
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    margin-top:5px;
+}
+
+.flute{
+    top:12%;
+    left:12%;
+}
+
+.feather{
+    top:12%;
+    right:12%;
+}
+
+.diya{
+    bottom:12%;
+    left:12%;
+}
+
+.matki{
+    bottom:12%;
+    right:12%;
+}
+
+/* =====================================================
+   GREETING
+===================================================== */
+
+.greeting-card{
+    max-width:650px;
+    margin:auto;
+
+    padding:40px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    border-radius:30px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+}
+
+.name-input{
+    width:100%;
+
+    padding:16px 20px;
+
+    border-radius:30px;
+
+    border:1px solid rgba(255,255,255,.25);
+
+    background:rgba(0,0,0,.25);
+
+    color:white;
+
+    text-align:center;
+
+    font-size:17px;
+
+    outline:none;
+
+    margin-bottom:15px;
+}
+
+.name-input::placeholder{
+    color:rgba(255,255,255,.5);
+}
+
+.blessing{
+    margin-top:30px;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.05);
+
+    display:none;
+
+    animation:fadeUp .6s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.blessing-icon{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.blessing-text{
+    font-size:20px;
+    line-height:1.7;
+}
+
+/* =====================================================
+   QUOTE
+===================================================== */
+
+.quote-section{
+    padding:110px 20px;
+    text-align:center;
+
+    background:rgba(255,255,255,.035);
+}
+
+.quote{
+    max-width:800px;
+    margin:auto;
+}
+
+.quote-mark{
+    font-size:80px;
+    opacity:.3;
+}
+
+.quote p{
+    font-size:clamp(28px,5vw,48px);
+    line-height:1.5;
+}
+
+.quote-author{
+    margin-top:20px;
+    opacity:.6;
+}
+
+/* =====================================================
+   MEDIA UPLOAD
+===================================================== */
+
+.upload-box{
+    max-width:900px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+}
+
+.upload-card{
+    padding:30px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.upload-card h3{
+    margin-bottom:15px;
+}
+
+.upload-card input{
+    width:100%;
+    margin:15px 0;
+
+    font-family:Arial,sans-serif;
+}
+
+.preview{
+    width:100%;
+    max-height:350px;
+    object-fit:cover;
+    border-radius:15px;
+    display:none;
+}
+
+video{
+    width:100%;
+    border-radius:15px;
+    display:none;
+}
+
+/* =====================================================
+   COUNTDOWN
+===================================================== */
+
+.countdown-section{
+    text-align:center;
+    padding:100px 20px;
+
+    background:rgba(255,255,255,.035);
+}
+
+.countdown{
+    font-family:Arial,sans-serif;
+
+    font-size:clamp(24px,6vw,55px);
+
+    font-weight:bold;
+
+    margin-top:30px;
+
+    letter-spacing:2px;
+}
+
+.countdown-message{
+    margin-top:20px;
+    opacity:.7;
+}
+
+/* =====================================================
+   SHARE
+===================================================== */
+
+.share-section{
+    text-align:center;
+    padding:100px 20px;
+}
+
+.share-section h2{
+    font-size:clamp(35px,6vw,55px);
+    margin-bottom:15px;
+}
+
+.share-section p{
+    opacity:.7;
+    margin-bottom:30px;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+    padding:80px 20px;
+    text-align:center;
+    background:#02030b;
+}
+
+.footer-icon{
+    font-size:60px;
+}
+
+footer h2{
+    margin:20px 0 10px;
+}
+
+footer p{
+    opacity:.65;
+}
+
+.copyright{
+    margin-top:30px;
+    font-family:Arial,sans-serif;
+    font-size:12px;
+}
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.modal{
+    position:fixed;
+    inset:0;
+
+    display:none;
+    align-items:center;
+    justify-content:center;
+
+    background:rgba(0,0,0,.8);
+
+    backdrop-filter:blur(10px);
+
+    z-index:2000;
+
+    padding:20px;
+}
+
+.modal-box{
+    max-width:500px;
+    width:100%;
+
+    padding:40px 30px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    background:
+        radial-gradient(circle at top,
+        #263e8d,
+        #080b21);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    animation:modalIn .4s ease;
+}
+
+@keyframes modalIn{
+    from{
+        transform:scale(.8);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.modal-icon{
+    font-size:70px;
+}
+
+.modal-title{
+    margin:20px 0 10px;
+    font-size:30px;
+}
+
+.modal-message{
+    line-height:1.7;
+    margin-bottom:25px;
+}
+
+.close{
+    float:right;
+
+    background:none;
+    border:none;
+
+    color:white;
+
+    font-size:30px;
+
+    cursor:pointer;
+}
+
+/* =====================================================
+   FLOWERS
+===================================================== */
+
+.flower{
+    position:fixed;
+
+    top:-40px;
+
+    pointer-events:none;
+
+    z-index:500;
+
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+    to{
+        transform:
+            translateY(110vh)
+            rotate(360deg);
+        opacity:.1;
+    }
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:700px){
+
+    .navbar{
+        padding:13px 5%;
+    }
+
+    .logo{
+        font-size:16px;
+    }
+
+    .nav-btn{
+        padding:7px 10px;
+        font-size:11px;
+    }
+
+    .hero{
+        min-height:100svh;
+    }
+
+    .peacock-feather{
+        font-size:70px;
+    }
+
+    .jhanki{
+        height:470px;
+    }
+
+    .krishna-button{
+        font-size:85px;
+    }
+
+    .sacred-icon{
+        font-size:38px;
+    }
+
+    .flute{
+        left:5%;
+        top:10%;
+    }
+
+    .feather{
+        right:5%;
+        top:10%;
+    }
+
+    .diya{
+        left:5%;
+        bottom:10%;
+    }
+
+    .matki{
+        right:5%;
+        bottom:10%;
+    }
+
+    .upload-box{
+        grid-template-columns:1fr;
+    }
+
+    .greeting-card{
+        padding:25px 18px;
+    }
+
+}
+
+</style></head><body><!-- =====================================================
+     BACKGROUND STARS
+===================================================== --><div class="stars" id="stars"></div><!-- =====================================================
+     NAVBAR
+===================================================== --><header class="navbar"><div class="logo">
+    🦚 Krishna Darshan
+</div>
+
+<div class="nav-buttons">
+
+    <button
+        class="nav-btn"
+        onclick="toggleMusic()"
+        id="musicButton">
+
+        🔇 Music
+
+    </button>
+
+    <button
+        class="nav-btn"
+        onclick="shareWebsite()">
+
+        📲 Share
+
+    </button>
+
+</div>
+
+</header><!-- =====================================================
+     HERO
+===================================================== --><section class="hero"><div class="hero-content">
+
+    <div class="peacock-feather">
+        🦚
+    </div>
+
+    <div class="om">
+        ॥ श्री कृष्ण जन्माष्टमी महोत्सव ॥
+    </div>
+
+    <h1>
+        Krishna Darshan
+    </h1>
+
+    <h2>
+        Janmashtami 2026
+    </h2>
+
+    <div class="hero-date">
+        🪈 Friday • 4 September 2026 🪈
+    </div>
+
+    <p class="hero-description">
+        Welcome to our little digital Krishna Nagari.
+        <br>
+        Explore, experience and share the joy of Janmashtami.
+    </p>
+
+    <button
+        class="primary-btn"
+        onclick="goTo('darshan')">
+
+        ✨ Enter Krishna Darshan
+
+    </button>
+
+</div>
+
+</section><!-- =====================================================
+     JHANKI
+===================================================== --><section
+    class="section"
+    id="darshan"><div class="label">
+    DIVINE EXPERIENCE
+</div>
+
+<h2 class="title">
+    Explore Our Jhanki
+</h2>
+
+<p class="description">
+    Tap the sacred elements to discover their messages.
+</p>
+
+
+<div class="jhanki">
+
+    <!-- CENTER KRISHNA -->
+
+    <div class="jhanki-center">
+
+        <button
+            class="krishna-button"
+            onclick="showMessage(
+            '🦚 Bal Krishna',
+            'जहाँ प्रेम है, वहाँ कृष्ण हैं। कान्हा की कृपा आपके जीवन में सदैव बनी रहे। 💙'
+            )">
+
+            👶🏻
+
+        </button>
+
+        <div class="krishna-label">
+            Bal Krishna
+        </div>
+
+    </div>
+
+
+    <!-- FLUTE -->
+
+    <button
+        class="sacred flute"
+        onclick="showMessage(
+        '🪈 Krishna Flute',
+        'मुरली की धुन हमें सिखाती है कि जीवन में प्रेम और विश्वास की मधुरता बनाए रखें।'
+        )">
+
+        <span class="sacred-icon">
+            🪈
+        </span>
+
+        <span class="sacred-name">
+            Flute
+        </span>
+
+    </button>
+
+
+    <!-- PEACOCK -->
+
+    <button
+        class="sacred feather"
+        onclick="showMessage(
+        '🦚 Peacock Feather',
+        'कृष्ण की मुस्कान में प्रेम है और उनकी लीला में जीवन का सार।'
+        )">
+
+        <span class="sacred-icon">
+            🦚
+        </span>
+
+        <span class="sacred-name">
+            Peacock Feather
+        </span>
+
+    </button>
+
+
+    <!-- DIYA -->
+
+    <button
+        class="sacred diya"
+        onclick="showMessage(
+        '🪔 Divine Diya',
+        'जहाँ कृष्ण का नाम है, वहाँ अंधकार टिक नहीं सकता।'
+        )">
+
+        <span class="sacred-icon">
+            🪔
+        </span>
+
+        <span class="sacred-name">
+            Divine Diya
+        </span>
+
+    </button>
+
+
+    <!-- MATKI -->
+
+    <button
+        class="sacred matki"
+        onclick="showMessage(
+        '🧈 Makhan Matki',
+        'कान्हा को सबसे प्रिय है प्रेम से अर्पित किया गया भोग।'
+        )">
+
+        <span class="sacred-icon">
+            🏺
+        </span>
+
+        <span class="sacred-name">
+            Makhan Matki
+        </span>
+
+    </button>
+
+</div>
+
+</section><!-- =====================================================
+     PERSONALIZED BLESSING
+===================================================== --><section class="section"><div class="label">
+    PERSONAL BLESSING
+</div>
+
+<h2 class="title">
+    Receive Krishna's Blessing
+</h2>
+
+<p class="description">
+    Enter your name and receive a special Janmashtami blessing.
+</p>
+
+
+<div class="greeting-card">
+
+    <input
+        class="name-input"
+        id="visitorName"
+        type="text"
+        placeholder="Enter your name"
+        maxlength="30">
+
+    <button
+        class="primary-btn"
+        onclick="generateBlessing()">
+
+        🦚 Receive Blessing
+
+    </button>
+
+
+    <div
+        class="blessing"
+        id="blessing">
+
+        <div class="blessing-icon">
+            🪷
+        </div>
+
+        <div
+            class="blessing-text"
+            id="blessingText">
+
+        </div>
+
+    </div>
+
+</div>
+
+</section><!-- =====================================================
+     QUOTE
+===================================================== --><section class="quote-section"><div class="quote">
+
+    <div class="quote-mark">
+        “
+    </div>
+
+    <p>
+        कर्म करते रहो,
+        परिणाम की चिंता मत करो।
+    </p>
+
+    <div class="quote-author">
+        — श्री कृष्ण
+    </div>
+
+</div>
+
+</section><!-- =====================================================
+     PERSONAL PHOTOS & VIDEO
+===================================================== --><section class="section"><div class="label">
+    YOUR CELEBRATION
+</div>
+
+<h2 class="title">
+    Add Your Memories
+</h2>
+
+<p class="description">
+    Add your own home decoration photographs and Janmashtami video.
+    These remain in your browser.
+</p>
+
+
+<div class="upload-box">
+
+
+    <!-- PHOTO -->
+
+    <div class="upload-card">
+
+        <h3>
+            📸 Your Decoration
+        </h3>
+
+        <p>
+            Select a photo of your Jhanki.
+        </p>
+
+        <input
+            type="file"
+            id="photoInput"
+            accept="image/*">
+
+        <img
+            id="photoPreview"
+            class="preview"
+            alt="Your Janmashtami decoration">
+
+    </div>
+
+
+    <!-- VIDEO -->
+
+    <div class="upload-card">
+
+        <h3>
+            🎥 Your Janmashtami Video
+        </h3>
+
+        <p>
+            Select your celebration video.
+        </p>
+
+        <input
+            type="file"
+            id="videoInput"
+            accept="video/*">
+
+        <video
+            id="videoPreview"
+            controls
+            playsinline>
+        </video>
+
+    </div>
+
+</div>
+
+</section><!-- =====================================================
+     COUNTDOWN
+===================================================== --><section class="countdown-section"><div class="label">
+    DIVINE MOMENT
+</div>
+
+<h2 class="title">
+    Krishna Janma Countdown
+</h2>
+
+<p>
+    Nishita Kaal • Delhi/Noida region
+</p>
+
+<div
+    class="countdown"
+    id="countdown">
+
+    Loading...
+
+</div>
+
+<div
+    class="countdown-message"
+    id="countdownMessage">
+
+</div>
+
+</section><!-- =====================================================
+     SHARE
+===================================================== --><section class="share-section"><h2>
+    Share Krishna's Blessings 🦚
+</h2>
+
+<p>
+    Invite your relatives and friends to experience Krishna Darshan.
+</p>
+
+<button
+    class="primary-btn"
+    onclick="shareWebsite()">
+
+    📲 Share With Family
+
+</button>
+
+</section><!-- =====================================================
+     FOOTER
+===================================================== --><footer><div class="footer-icon">
+    🦚
+</div>
+
+<h2>
+    जय श्री कृष्ण
+</h2>
+
+<p>
+    नंद के घर आनंद भयो,
+    जय कन्हैया लाल की!
+</p>
+
+<div class="copyright">
+    Krishna Darshan • Janmashtami 2026
+</div>
+
+</footer><!-- =====================================================
+     MODAL
+===================================================== --><div
+    class="modal"
+    id="modal"><div class="modal-box">
+
+    <button
+        class="close"
+        onclick="closeModal()">
+
+        ×
+
+    </button>
+
+    <div
+        class="modal-icon"
+        id="modalIcon">
+
+        🦚
+
+    </div>
+
+    <h2
+        class="modal-title"
+        id="modalTitle">
+
+        Krishna
+
+    </h2>
+
+    <p
+        class="modal-message"
+        id="modalMessage">
+
+    </p>
+
+    <button
+        class="primary-btn"
+        onclick="closeModal()">
+
+        राधे राधे 🙏
+
+    </button>
+
+</div>
+
+</div><script>
+
+/* =====================================================
+   CREATE STARS
+===================================================== */
+
+const starsContainer =
+    document.getElementById("stars");
+
+for(let i=0;i<60;i++){
+
+    const star =
+        document.createElement("div");
+
+    star.className="star";
+
+    star.textContent =
+        Math.random() > .5 ? "✦" : "✧";
+
+    star.style.left =
+        Math.random()*100+"%";
+
+    star.style.top =
+        Math.random()*100+"%";
+
+    star.style.fontSize =
+        (8+Math.random()*15)+"px";
+
+    star.style.animationDelay =
+        Math.random()*3+"s";
+
+    starsContainer.appendChild(star);
+
+}
+
+
+/* =====================================================
+   SCROLL
+===================================================== */
+
+function goTo(id){
+
+    document
+        .getElementById(id)
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+function showMessage(title,message){
+
+    document
+        .getElementById("modalTitle")
+        .textContent=title;
+
+    document
+        .getElementById("modalMessage")
+        .textContent=message;
+
+    document
+        .getElementById("modal")
+        .style.display="flex";
+
+}
+
+function closeModal(){
+
+    document
+        .getElementById("modal")
+        .style.display="none";
+
+}
+
+document
+    .getElementById("modal")
+    .addEventListener(
+        "click",
+        function(e){
+
+            if(e.target===this){
+
+                closeModal();
+
+            }
+
+        }
+    );
+
+
+/* =====================================================
+   PERSONALIZED BLESSING
+===================================================== */
+
+function generateBlessing(){
+
+    const name =
+        document
+        .getElementById("visitorName")
+        .value
+        .trim();
+
+    const blessing =
+        document
+        .getElementById("blessing");
+
+    const text =
+        document
+        .getElementById("blessingText");
+
+
+    if(!name){
+
+        alert("कृपया अपना नाम लिखें 🙏");
+
+        return;
+
+    }
+
+
+    const messages=[
+
+        `${name}, श्री कृष्ण आपके जीवन को प्रेम, शांति और आनंद से भर दें। 🦚💙`,
+
+        `${name}, कान्हा की कृपा आपके और आपके परिवार पर सदैव बनी रहे। 🪷🙏`,
+
+        `${name}, श्री कृष्ण आपको हर कठिन राह पर सही दिशा और शक्ति दें। 🪈✨`,
+
+        `${name}, आपके जीवन में कृष्ण की मुस्कान जैसी खुशियाँ सदैव बनी रहें। 💙`,
+
+        `${name}, राधे-कृष्ण आपके जीवन में सुख, शांति और समृद्धि लेकर आएँ। 🦚🙏`
+
+    ];
+
+
+    const random =
+        Math.floor(
+            Math.random()*messages.length
+        );
+
+
+    text.textContent =
+        messages[random];
+
+    blessing.style.display="block";
+
+    createFlowers(12);
+
+}
+
+
+/* =====================================================
+   ENTER KEY
+===================================================== */
+
+document
+    .getElementById("visitorName")
+    .addEventListener(
+        "keydown",
+        function(e){
+
+            if(e.key==="Enter"){
+
+                generateBlessing();
+
+            }
+
+        }
+    );
+
+
+/* =====================================================
+   FLOWER EFFECT
+===================================================== */
+
+function createFlowers(number=8){
+
+    const flowers=[
+        "🌸",
+        "🌺",
+        "🌼",
+        "🪷",
+        "✨",
+        "🦚"
+    ];
+
+
+    for(let i=0;i<number;i++){
+
+        const flower =
+            document.createElement("div");
+
+        flower.className="flower";
+
+        flower.textContent =
+            flowers[
+                Math.floor(
+                    Math.random()*flowers.length
+                )
+            ];
+
+        flower.style.left =
+            Math.random()*100+"%";
+
+        flower.style.fontSize =
+            (16+Math.random()*20)+"px";
+
+        flower.style.animationDuration =
+            (5+Math.random()*6)+"s";
+
+        document.body.appendChild(flower);
+
+
+        setTimeout(
+            ()=>flower.remove(),
+            12000
+        );
+
+    }
+
+}
+
+setInterval(
+    ()=>createFlowers(2),
+    5000
+);
+
+
+/* =====================================================
+   PHOTO PREVIEW
+===================================================== */
+
+document
+    .getElementById("photoInput")
+    .addEventListener(
+        "change",
+        function(){
+
+            const file =
+                this.files[0];
+
+            if(!file) return;
+
+            const url =
+                URL.createObjectURL(file);
+
+            const preview =
+                document
+                .getElementById("photoPreview");
+
+            preview.src=url;
+
+            preview.style.display="block";
+
+        }
+    );
+
+
+/* =====================================================
+   VIDEO PREVIEW
+===================================================== */
+
+document
+    .getElementById("videoInput")
+    .addEventListener(
+        "change",
+        function(){
+
+            const file =
+                this.files[0];
+
+            if(!file) return;
+
+            const url =
+                URL.createObjectURL(file);
+
+            const video =
+                document
+                .getElementById("videoPreview");
+
+            video.src=url;
+
+            video.style.display="block";
+
+        }
+    );
+
+
+/* =====================================================
+   COUNTDOWN
+===================================================== */
+
+/*
+   Nishita Puja target:
+   September 4, 2026 — 11:57 PM
+*/
+
+const targetDate =
+    new Date(
+        "2026-09-04T23:57:00+05:30"
+    );
+
+
+function updateCountdown(){
+
+    const now =
+        new Date();
+
+    const difference =
+        targetDate-now;
+
+
+    const countdown =
+        document
+        .getElementById("countdown");
+
+    const message =
+        document
+        .getElementById("countdownMessage");
+
+
+    if(difference<=0){
+
+        countdown.textContent =
+            "🦚 जय श्री कृष्ण! 🦚";
+
+        message.textContent =
+            "कृष्ण जन्मोत्सव का पावन क्षण आ गया है।";
+
+        return;
+
+    }
+
+
+    const days =
+        Math.floor(
+            difference/
+            (1000*60*60*24)
+        );
+
+    const hours =
+        Math.floor(
+            (difference/
+            (1000*60*60))%24
+        );
+
+    const minutes =
+        Math.floor(
+            (difference/
+            (1000*60))%60
+        );
+
+    const seconds =
+        Math.floor(
+            (difference/1000)%60
+        );
+
+
+    countdown.textContent =
+        `${days}D • ${hours}H • ${minutes}M • ${seconds}S`;
+
+    message.textContent =
+        "Preparing for the divine midnight celebration...";
+
+}
+
+
+setInterval(
+    updateCountdown,
+    1000
+);
+
+updateCountdown();
+
+
+/* =====================================================
+   SIMPLE FLUTE-STYLE AMBIENT SOUND
+===================================================== */
+
+let audioContext=null;
+let oscillator=null;
+let gainNode=null;
+
+function toggleMusic(){
+
+    const button =
+        document
+        .getElementById("musicButton");
+
+
+    if(!audioContext){
+
+        audioContext =
+            new (
+                window.AudioContext ||
+                window.webkitAudioContext
+            )();
+
+        oscillator =
+            audioContext
+            .createOscillator();
+
+        gainNode =
+            audioContext
+            .createGain();
+
+
+        oscillator.type="sine";
+
+        oscillator.frequency.value=261.63;
+
+        gainNode.gain.value=.015;
+
+        oscillator
+            .connect(gainNode)
+            .connect(
+                audioContext.destination
+            );
+
+        oscillator.start();
+
+        button.textContent="🔊 Music";
+
+    }
+
+    else if(
+        audioContext.state==="running"
+    ){
+
+        audioContext.suspend();
+
+        button.textContent="🔇 Music";
+
+    }
+
+    else{
+
+        audioContext.resume();
+
+        button.textContent="🔊 Music";
+
+    }
+
+}
+
+
+/* =====================================================
+   SHARE
+===================================================== */
+
+async function shareWebsite(){
+
+    const data={
+
+        title:
+            "Krishna Darshan — Janmashtami 2026",
+
+        text:
+            "🦚 Join me for Krishna Darshan — Janmashtami 2026! जय श्री कृष्ण 🙏",
+
+        url:
+            window.location.href
+
+    };
+
+
+    if(
+        navigator.share
+    ){
+
+        try{
+
+            await navigator.share(data);
+
+        }
+        catch(error){
+
+            console.log(
+                "Sharing cancelled."
+            );
+
+        }
+
+    }
+    else{
+
+        const whatsappText =
+            encodeURIComponent(
+                data.text+
+                "\n"+
+                data.url
+            );
+
+
+        window.open(
+            "https://wa.me/?text="+
+            whatsappText,
+            "_blank"
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   INITIAL FLOWERS
+===================================================== */
+
+setTimeout(
+    ()=>createFlowers(8),
+    1500
+);
+
+</script></body>
+</html>
